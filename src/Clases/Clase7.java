@@ -4,6 +4,11 @@ import org.w3c.dom.ls.LSOutput;
 
 public class Clase7 {
 
+    /**
+     * La clase 7 proporciona la resolución matemática de logaritmos y exponenciales
+     * @author Adrián Guerrero Martínez
+     * @version 1.0
+     */
     //LOGARITMOS Y EXPONENCIALES
 
     // 1: LOGARITMO NATURAL
@@ -20,5 +25,4 @@ public class Clase7 {
     public double exp(double x){
         return (Math.exp(x));
     }
-
 }
