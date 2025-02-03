@@ -2,14 +2,14 @@ package Clases;
 
 import org.w3c.dom.ls.LSOutput;
 
-public class Clase7 {
+/**
+ * LOGARITMOS Y EXPONENCIALES
+ * Esta clase proporciona la resolución matemática de logaritmos y exponenciales
+ * @author Adrián Guerrero Martínez
+ * @version 1.0
+ */
 
-    /**
-     * LOGARITMOS Y EXPONENCIALES
-     * Esta clase proporciona la resolución matemática de logaritmos y exponenciales
-     * @author Adrián Guerrero Martínez
-     * @version 1.0
-     */
+public class Clase7 {
 
     // 1: LOGARITMO NATURAL
     public double log(double x) {
