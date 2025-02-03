@@ -12,6 +12,9 @@ public class Clase7 {
     }
 
     // 2: LOGARITMO DECIMAL
+    public double log10(double x){
+        return (Math.log10(x));
+    }
 
     // 3: EXPONENCIAL
 
