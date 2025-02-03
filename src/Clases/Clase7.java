@@ -17,5 +17,8 @@ public class Clase7 {
     }
 
     // 3: EXPONENCIAL
+    public double exp(double x){
+        return (Math.exp(x));
+    }
 
 }
