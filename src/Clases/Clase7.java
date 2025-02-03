@@ -20,6 +20,11 @@ public class Clase7 {
         return (Math.log(x));
     }
 
+    /** LOGARITMO DECIMAL
+     * Función que resuelve el logaritmo decimal (base 10)
+     * @param x Número sobre el que se va a calcular el logaritmo decimal
+     * @return Logaritmo decimal de x.
+     */
     // 2: LOGARITMO DECIMAL
     public double log10(double x){
         return (Math.log10(x));
