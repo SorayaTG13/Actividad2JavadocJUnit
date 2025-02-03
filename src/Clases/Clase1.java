@@ -5,10 +5,6 @@ package Clases;
  */
 public class Clase1 {
     /**
-     *
-     * Se Crean 4 métodos distintos relacionados con la suma:
-     */
-    /**
      * Suma de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
      * @param a Primer número a sumar
      * @param b Segundo numero a sumar
@@ -45,7 +41,7 @@ public class Clase1 {
       * La clase Acumulador permite almacenar e ir actualizando el acumulado de una suma
       *
      */
-     public class Acumulador {
+     public static class Acumulador {
          private double suma;
 
          /**
@@ -69,20 +65,18 @@ public class Clase1 {
          }
 
          // Metodos para poner en el main
-         /**
-          * Clase main que contiene el metodo principal para probar las funcionalidades de la calculadora
-          */
-         public class Main {
+
+
              /**
               * Creamos el Metodo principal que ejecutará las pruebas
-              * @param args
               */
+
              public static void main(String[] args) {
                  //Creamos el metodo de instancia de la Clase
                  Clase1 clase1 = new Clase1();
 
                  //Creamos el metodo de instancia para el acumulador
-                 Clase1.Acumulador acumulador = clase1.new Acumulador();
+                 Clase1.Acumulador acumulador = new Acumulador();
 
                  //Hacemos las pruebas de los correspondientes metodos de la suma
                  System.out.println("Suma de los numeros reales"+ clase1.sumar(1.5, 2.5));
@@ -98,7 +92,7 @@ public class Clase1 {
                  System.out.println("Suma de los numeros enteros"+ acumulador.getSuma());
 
              }
-         }
+
 
      }
 
