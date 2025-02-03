@@ -11,7 +11,11 @@ import org.w3c.dom.ls.LSOutput;
 
 public class Clase7 {
 
-    // 1: LOGARITMO NATURAL
+    /** LOGARITMO NATURAL
+     * Función que resuelve el logaritmo natural (base "e").
+     * @param x Número sobre el que se va a calcular el logaritmo natural
+     * @return Logaritmo natural de x.
+     */
     public double log(double x) {
         return (Math.log(x));
     }
