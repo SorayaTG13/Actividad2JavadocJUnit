@@ -30,7 +30,11 @@ public class Clase7 {
         return (Math.log10(x));
     }
 
-    // 3: EXPONENCIAL
+    /** FUNCIÓN EXPONENCIAL
+     * Función que realiza la función exponencial (base "e")
+     * @param x Número al que se va elevar a la base exponencial "e"
+     * @return Función exponencial de x.
+     */
     public double exp(double x){
         return (Math.exp(x));
     }
