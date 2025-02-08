@@ -1,6 +1,6 @@
 package Clases;
 
-public class Clase6 {
+public class Trigonometria {
 
     //metodos para calcular el seno, el conseno y la tangente
     public static double calculaSeno(double angulo) {
