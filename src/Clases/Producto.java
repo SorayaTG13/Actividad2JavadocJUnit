@@ -4,7 +4,7 @@ package Clases;
  * @author  Esther Igualada Panadero
  * version 1.0
  */
-public class Clase3 {
+public class Producto {
     private static System system;
 
     /**
