@@ -1,5 +1,13 @@
 package Clases;
 
+/*
+ *Clase que implementará los métodos relacionados con el calculo del seno,
+ * conseno y tangente para la calculadora.
+ *
+ * @author: Aarón Díaz Hernández
+ * @version: 1.0
+ */
+
 public class Trigonometria {
 
     //metodos para calcular el seno, el conseno y la tangente
