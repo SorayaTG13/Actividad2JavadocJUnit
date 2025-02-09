@@ -1,5 +1,7 @@
 
 
+import Clases.Logaritmos;
+
 import java.util.Scanner;
 
 /**
