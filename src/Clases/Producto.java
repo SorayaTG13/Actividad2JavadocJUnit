@@ -4,7 +4,7 @@ package Clases;
  * @author  Esther Igualada Panadero
  * version 1.0
  */
-public class Clase3 {
+public class Producto {
     private static System system;
 
     /**
@@ -54,22 +54,22 @@ public double potencia(double numero1,double numero2){
  * metodo para probar los metodos de la clase3
  */
 public static void main(String[]args){
-    Clase3 Clase3 = new Clase3();
+    Producto Producto = new Producto();
 
     // producto dos números reales
-    double resultadoReales=Clase3.productoReales(3.2,5.4);
+    double resultadoReales= Producto.productoReales(3.2,5.4);
     System.out.println("Producto de 3.2 y 5.4 (reales): " + resultadoReales);
 
     //producto dos números enteros
-    int resultadoEnteros =Clase3.productoEnteros(3,5);
+    int resultadoEnteros = Producto.productoEnteros(3,5);
     System.out.println("Producto de 3 y 5 (enteros): " + resultadoEnteros);
 
     //producto de tres numeros reales
-    double ResultadoTresReales=Clase3.productotresReales(2.5,3.2,2.3);
+    double ResultadoTresReales= Producto.productotresReales(2.5,3.2,2.3);
     system.out.println("producto de 2.5,3.2 y 2.3 (reales): " + ResultadoTresReales);
 
     //potencia
-    double ResultadoPotencia=Clase3.potencia(3.2,5.4);
+    double ResultadoPotencia= Producto.potencia(3.2,5.4);
     system.out.println("potencia(3.2,5.4): " + ResultadoPotencia);
 }
 }
