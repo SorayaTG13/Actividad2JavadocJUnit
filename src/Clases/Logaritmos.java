@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @version 1.0
  */
 
-public class LogaritmosExponenciales {
+public class Logaritmos {
 
     /**
      * LOGARITMO NATURAL
