@@ -38,6 +38,14 @@ public class Logaritmos {
      */
     // 2: LOGARITMO DECIMAL
     public static double log10(double x) {
+        if(x <= 0){
+            throw new IllegalArgumentException("El número introducido está fuera del dominio de los " +
+                    "logaritmos (0,inf)");
+        }
+        if(x > Double.MAX_VALUE){
+            throw new ArithmeticException("El número introducido excede el valor máximo asignado para" +
+                    "variables de tipo double");
+        }
         return (Math.log10(x));
     }
 
