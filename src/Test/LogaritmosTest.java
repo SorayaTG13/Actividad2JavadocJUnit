@@ -36,9 +36,25 @@ class LogaritmosTest {
     }
 
     //PRUEBAS UNITARIAS PARA LOGARITMOS DECIMALES
-    /*@org.junit.jupiter.api.Test
-    void log10() {
-    }*/
+    @org.junit.jupiter.api.Test
+    void log10Negativo() {
+        assertThrows(IllegalArgumentException.class, () -> prueba.log10(-100));
+    }
+
+    @org.junit.jupiter.api.Test
+    void log10Cero() {
+        assertThrows(IllegalArgumentException.class, () -> prueba.log10(0));
+    }
+
+    @org.junit.jupiter.api.Test
+    void log10Positivo() {
+        assertEquals(2, prueba.log10(100), "El resultado de la operación debe ser: 2");
+    }
+
+    @org.junit.jupiter.api.Test
+    void log10Infinito() {
+        assertThrows(ArithmeticException.class, () -> prueba.log10(Double.POSITIVE_INFINITY));
+    }
 
     //PRUEBAS UNITARIAS PARA FUNCIONES EXPONENCIALES
     /*@org.junit.jupiter.api.Test
