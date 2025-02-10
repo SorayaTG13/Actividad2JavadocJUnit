@@ -57,7 +57,23 @@ class LogaritmosTest {
     }
 
     //PRUEBAS UNITARIAS PARA FUNCIONES EXPONENCIALES
-    /*@org.junit.jupiter.api.Test
-    void exp() {
-    }*/
+    @org.junit.jupiter.api.Test
+    void expMenosInfinito() {
+        assertEquals(0, prueba.exp(-Double.POSITIVE_INFINITY),"El resultado de la operación debe ser: 0");
+    }
+
+    @org.junit.jupiter.api.Test
+    void expCero() {
+        assertEquals(1, prueba.exp(0), "El resultado de la operación debe ser: 1");
+    }
+
+    @org.junit.jupiter.api.Test
+    void expNumeroE() {
+        assertEquals(Math.E, prueba.exp(1), "El resultado de la operación debe ser: 2.718...");
+    }
+
+    @org.junit.jupiter.api.Test
+    void expInfinito() {
+        assertEquals(Double.POSITIVE_INFINITY, prueba.exp(Double.MAX_VALUE));
+    }
 }
