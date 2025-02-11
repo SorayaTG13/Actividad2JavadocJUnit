@@ -59,7 +59,7 @@ class LogaritmosTest {
     //PRUEBAS UNITARIAS PARA FUNCIONES EXPONENCIALES
     @org.junit.jupiter.api.Test
     void expMenosInfinito() {
-        assertEquals(0, prueba.exp(-Double.POSITIVE_INFINITY),"El resultado de la operación debe ser: 0");
+        assertThrows(ArithmeticException.class, () -> prueba.exp(-Double.POSITIVE_INFINITY));
     }
 
     @org.junit.jupiter.api.Test
@@ -74,6 +74,6 @@ class LogaritmosTest {
 
     @org.junit.jupiter.api.Test
     void expInfinito() {
-        assertEquals(Double.POSITIVE_INFINITY, prueba.exp(Double.MAX_VALUE));
+        assertThrows(ArithmeticException.class, () -> prueba.exp(Double.POSITIVE_INFINITY));
     }
 }
