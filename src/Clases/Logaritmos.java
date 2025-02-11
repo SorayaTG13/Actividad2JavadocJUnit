@@ -57,6 +57,14 @@ public class Logaritmos {
      * @return Función exponencial de x.
      */
     public static double exp(double x) {
+        if (x < -Double.MAX_VALUE){
+            throw new ArithmeticException("El número introducido excede el valor mínimo asignado para" +
+                    "variables de tipo double");
+        }
+        if (x > Double.MAX_VALUE){
+            throw new ArithmeticException("El número introducido excede el valor máximo asignado para" +
+                    "variables de tipo double");
+        }
         return (Math.exp(x));
     }
 
