@@ -1,7 +1,7 @@
 package Test;
 
-import.org.junit.jupiter.api.Test;
-import Static Org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Clase3Test {
 
@@ -34,5 +34,6 @@ public class Clase3Test {
     public void testPotencia() {
         double resultado = clase3.potencia(3.2, 5.4);
         assertEquals(Math.pow(3.2, 5.4), resultado, "La potencia de 3.2^5.4 debe ser igual al valor calculado.");
+    }
 
 }
