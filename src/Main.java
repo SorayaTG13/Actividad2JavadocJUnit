@@ -2,6 +2,7 @@
 
 import Clases.Logaritmos;
 import Clases.Suma;
+import Clases.Trigonometria;
 
 import java.util.Scanner;
 

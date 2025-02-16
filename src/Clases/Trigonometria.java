@@ -1,49 +1,67 @@
 package Clases;
 
 /*
- *Clase que implementará los métodos relacionados con el calculo del seno,
+ * Clase que implementará los métodos relacionados con el calculo del seno,
  * conseno y tangente para la calculadora.
  *
  * @author: Aarón Díaz Hernández
- * @version: 1.0
+ * @version: 1.3
  */
+
+import java.util.Scanner;
 
 public class Trigonometria {
 
-    //metodos para calcular el seno, el conseno y la tangente
     public static double calculaSeno(double angulo) {
-        return Math.sin(angulo);
+        return Math.sin(Math.toRadians(angulo));
     }
 
     public static double calculaCoseno(double angulo) {
-        return Math.cos(angulo);
+        return Math.cos(Math.toRadians(angulo));
     }
 
     public static double calculaTangente(double angulo) {
-        return Math.tan(angulo);
+        return Math.tan(Math.toRadians(angulo));
     }
 
-    //Metodo a poner en Main
+    public static void menu() {
+        Scanner leer = new Scanner(System.in);
+        int opcion;
+        do {
+            System.out.println("\nSelecciona la operación trigonométrica a realizar");
+            System.out.println("1. Calcular Seno");
+            System.out.println("2. Calcular Coseno");
+            System.out.println("3. Calcular Tangente");
+            System.out.println("0. Salir");
+            System.out.print("Elige una opción: ");
+
+            opcion = leer.nextInt();
+            if (opcion >= 1 && opcion <= 3) {
+                System.out.print("Introduce el ángulo en grados: ");
+                double angulo = leer.nextDouble();
+
+                switch (opcion) {
+                    case 1:
+                        System.out.println("El seno de " + angulo + "° es: " + calculaSeno(angulo));
+                        break;
+                    case 2:
+                        System.out.println("El coseno de " + angulo + "° es: " + calculaCoseno(angulo));
+                        break;
+                    case 3:
+                        System.out.println("La tangente de " + angulo + "° es: " + calculaTangente(angulo));
+                        break;
+                }
+            } else if (opcion != 0) {
+                System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+
+        } while (opcion != 0);
+
+        System.out.println("Saliendo del programa.");
+        leer.close();
+    }
+
     public static void main(String[] args) {
-        double angulo = Math.PI;
-        /*
-        Tabla de formulas para calcular el seno, coseno y tangente, pasando de
-        grados a grados radianes:
-
-        360º = Math.PI * 2
-        270º = Math.pi + (Math.pi / 2) OJO!! esta operación peta el ItelliJ ya que el resultado de la tangente es infinito
-        180º = Math.PI
-        90ª = Math.PI / 2
-        45ª = Math.PI / 4
-
-        Explicación: la funcion Math. de java trabaja haciendo los calculos en radianes,
-        por lo que he tenido que realizar la operacion pasando de grados a radianes, no
-        pudiendo hacer los calculos en grados y que fuese mas vistozo.
-        */
-
-        System.out.println("-El seno, coseno y tangente de 180 grados en radianes es:"); //Modificar este sout cada vez que se modifique la formula
-        System.out.println("\n-El seno de " + angulo + " grados radianes es: " + calculaSeno(angulo));
-        System.out.println("\n-El coseno de " + angulo + " grados radianes es: " + calculaCoseno(angulo));
-        System.out.println("\n-La tangente de " + angulo + " grados radianes es: " + calculaTangente(angulo));
+        menu();
     }
 }
