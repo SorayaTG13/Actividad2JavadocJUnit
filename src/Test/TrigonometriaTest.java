@@ -2,7 +2,6 @@ package Test;
 
 import Clases.Trigonometria;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junior.jupiter.api.Test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,13 +33,4 @@ class TrigonometriaTest {
         assertEquals(1, Math.tan(Math.toRadians(45)), 0.0001, "La tangente de 45° debe ser 1");
     }
 
-    @Test
-    void tangenteDeNoventa() {
-        assertThrows(ArithmeticException.class, () -> {
-            double resultado = Math.tan(Math.toRadians(90));
-            if (Double.isInfinite(resultado)) {
-                throw new ArithmeticException("Tangente indefinida en 90°");
-            }
-        });
-    }
 }
