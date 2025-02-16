@@ -15,8 +15,12 @@ public class Suma {
      * @param a Primer número a sumar
      * @param b Segundo numero a sumar
      * @return La suma de a + b.
+     * @throws IllegalArgumentException Si cualquiera de los sumandos es 0
      */
         public double sumaReales (double a, double b) {
+            if (a == 0 || b == 0) {
+                throw new IllegalArgumentException("No existe cambio por que un sumando + 0 da el mismo resultado");
+            }
             return a + b;
         }
 
@@ -24,9 +28,13 @@ public class Suma {
      * Suma de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
       * @param a Primer número a sumar
       * @param b Segundo numero a sumar
+      * @throws IllegalArgumentException Si cualquiera de los sumandos es 0
       * @return La suma de a + b.
      */
         public int sumaEnteros (int a, int b) {
+            if (a == 0 || b == 0) {
+                throw new IllegalArgumentException("No existe cambio por que un sumando + 0 da el mismo resultado");
+            }
             return a + b;
      }
 
@@ -35,10 +43,22 @@ public class Suma {
       *  @param a Primer número a sumar
       *  @param b Segundo numero a sumar
       * @param  c Tercer numero a sumar
-      *  @return La suma de a + b + c.
+      * @return La suma de a + b + c.
+      * @throws IllegalArgumentException Si cualquiera de los sumandos es 0
       */
 
      public double sumaMultiple (double a, double b, double c) {
+         int contador = 0;
+
+         // Contamos cuantos de ellos son 0
+         if (a == 0) contador++;
+         if (b == 0) contador++;
+         if (c == 0) contador++;
+
+         // Si hay dos o mas ceros, lanzamos una excepcion
+         if(contador >= 2) {
+             throw new IllegalArgumentException("No existe cambio por que un sumando + 0 da el mismo resultado");
+         }
          return a + b + c;
      }
 
