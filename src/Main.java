@@ -1,6 +1,7 @@
 
 
 import Clases.Logaritmos;
+import Clases.Suma;
 
 import java.util.Scanner;
 
@@ -60,7 +61,7 @@ public class Main {
 
             }
 
-        }while (sc.nextInt() != '9');
+        }while (opcion != 9);
 
         sc.close();
 
