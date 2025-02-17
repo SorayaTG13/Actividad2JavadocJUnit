@@ -28,7 +28,7 @@ public class Resta {
     }
 
     /**
-     * método para obtener valorAcumulado,
+     *  Este método  sirve para obtener  el valorAcumulado,
      * Esto permite consultar el valor acumulado
      * sin tener que volver a restar.
      *
