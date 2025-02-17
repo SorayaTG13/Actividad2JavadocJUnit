@@ -6,7 +6,7 @@ import java.util.Scanner;
  * ESTADISTICA
  * Esta clase proporciona métodos para calcular medidas estadísticas.
  * @author Mariano Criado Prados
- * @version 1.0
+ * @version 1.1
 **/
 
 public class Estadistica {
