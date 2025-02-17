@@ -49,7 +49,7 @@ class RestaTest {
     }
 
     @org.junit.jupiter.api.Test
-    //comprueba la resta de tres números reales.
+    //Realiza la resta de tres números reales.
     void restarRealesTres() {
         double resultado = resta.restarRealesTres(2.7, 6.9, 1.3);
         assertEquals(-5.5, resultado);

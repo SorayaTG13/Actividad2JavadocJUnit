@@ -104,7 +104,7 @@ public class Resta {
             System.out.println("6 - Salir");
 
             while (!sc.hasNextInt()) {
-                System.out.println(" Introduce un número valido.");
+                System.out.println(" Introduce un número .");
                 sc.next();
             }
             opcion = sc.nextInt();
@@ -142,7 +142,7 @@ public class Resta {
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intenta de nuevo.");
+                    System.out.println("Opción no válida.");
             }
         } while (opcion != 6);
 
