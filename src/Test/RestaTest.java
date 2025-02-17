@@ -20,8 +20,8 @@ class RestaTest {
 
 
         @org.junit.jupiter.api.Test
-        void getValorAcumulado () {
-        }
+        void getValorAcumulados;
+    }
 
         @org.junit.jupiter.api.Test
         void restar () {
