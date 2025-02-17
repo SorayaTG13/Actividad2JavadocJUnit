@@ -104,7 +104,7 @@ public class Resta {
             System.out.println("6 - Salir");
 
             while (!sc.hasNextInt()) {
-                System.out.println(" Introduce un número válido.");
+                System.out.println(" Introduce un número valido.");
                 sc.next();
             }
             opcion = sc.nextInt();
