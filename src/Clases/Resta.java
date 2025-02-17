@@ -121,7 +121,7 @@ public class Resta {
                     System.out.println("Introduce dos números reales:");
                     double numR1 = sc.nextDouble();
                     double numR2 = sc.nextDouble();
-                    System.out.println(" Este es el Resultado: " + menu.restarReales(numR1,numR2));
+                    System.out.println(" Este es el Resultado de restar dos números reales: " + menu.restarReales(numR1,numR2));
                     break;
                 case 3:
                     System.out.println("Introduce tres números reales:");
