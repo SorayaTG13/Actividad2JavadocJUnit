@@ -1,5 +1,7 @@
 package Clases;
 
+import java.util.Scanner;
+
 /**
  *Clase que implementará todos los métodos que están relacionados con la división de la
  * Calculadora.
@@ -21,7 +23,7 @@ package Clases;
 
         public static double cocienteReales (double a, double b){
             if(b==0) {
-                System.out.println("Error. No es posible dividir entre 0");
+                throw new ArithmeticException("Error. No es posible dividir entre 0");
             }
             return a/b;
         }
@@ -30,87 +32,95 @@ package Clases;
      * División de dos números enteros. Tendrá 2 parámetros de entrada y uno de salida que
      * será la solución
      *
-     * @param a Número entero Numerador
-     * @param b Número entero Denominador
+     * @param entero1 Número entero Numerador
+     * @param entero2 Número entero Denominador
      * @return Resultado de la división entre dos números enteros (a y b)
      * @throws ArithmeticException mostrará un mensaje de error cuando b(denominador) sea 0
      */
 
-        public static int cocienteEnteros(int a, int b){
-            if(b==0){
-                System.out.println("Error. No es posible dividir entre 0");
+        public static int cocienteEnteros(int entero1, int entero2){
+            if(entero2==0){
+                throw new ArithmeticException("Error. No es posible dividir entre 0");
             }
-            return a/b;
+            return entero1/entero2;
         }
 
     /**
      * Inverso de un número real. Tendrá un parámetro de entrada y uno de salida que
      * será la solución
      *
-     * @param b Número real (denominador).
+     * @param numInv Número entero (denominador).
      * @return División del número 1 partido por un número (denominador)
      * @throws ArithmeticException mostrará un mensaje de error cuando b(denominador) sea 0
      */
 
-        public static double cocienteInverso(double b) {
-            if(b==0){
-                System.out.println("Error. No es posible dividir entre 0");
+        public static double cocienteInverso(int numInv) {
+            if(numInv==0){
+                throw new ArithmeticException("Error. No es posible dividir entre 0");
             }
-            return 1/b;
+            return (double) 1 /numInv;
         }
 
     /**
      * Raíz de un número. Tendrá un parámetro de entrada y uno de salida que
      * será la solución.
      *
-     * @param a Número real del que se calculará la raíz cuadrada
+     * @param numRaiz Número real del que se calculará la raíz cuadrada
      * @return Raíz cuadrada de un número.
      * @throws ArithmeticException mostrará un mensaje de error cuando a sea un número negativo
      */
 
-        public static double raizCuadrada (double a) {
-            if(a<0){
-                System.out.println("Error. No es posible calcular la raíz cuadrada de un número negativo");
+        public static double raizCuadrada (int numRaiz) {
+            if(numRaiz<0){
+                throw new ArithmeticException("Error. No es posible calcular la raíz cuadrada de un número negativo");
             }
-            return Math.sqrt(a);
+            return Math.sqrt(numRaiz);
         }
 
-        public static void main(String[] args) {
-            Cociente cociente = new Cociente();
 
-            // División números reales
-            double divisionReales = Cociente.cocienteReales(4.25,2.35);
-            System.out.println("División reales: " + divisionReales);
+        public static void menu(){
+            Scanner scanner= new Scanner(System.in);
 
-            // División reales entre 0
-            divisionReales = Cociente.cocienteReales(4.25,0);
-            System.out.println("Reales entre 0: " + divisionReales);
+            do{
+                System.out.println("Selecciona qué operación con cocientes deseas realizar:  ");
+                System.out.println("1. División de dos números reales");
+                System.out.println("2. División de dos números enteros");
+                System.out.println("3. Inverso de un número entero");
+                System.out.println("Raíz cuadrada de un número");
 
-            // División enteros
-            double divisionEnteros = Cociente.cocienteEnteros(4,2);
-            System.out.println("División enteros: " + divisionEnteros);
+                int opcion = scanner.nextInt();
 
-            // División enteros con resultado decimal
+                switch (opcion) {
+                        case 1:
+                        System.out.println("Dame un número real");
+                          double a = scanner.nextDouble();
+                        System.out.println("Dame un número real");
+                          double b = scanner.nextDouble();
+                        System.out.println("El resultado de la división entre dos reales es: " + cocienteReales(a,b));
+                        break;
 
-            ///System.out.println();
+                      case 2:
+                          System.out.println("Dame un número entero: ");
+                          int entero1 = scanner.nextInt();
+                          System.out.println("Dame otro número entero: ");
+                          int entero2 = scanner.nextInt();
+                          System.out.println("El resultado de la división entre dos números enteros es: " + cocienteEnteros(entero1, entero2));
 
-            // División enteros entre 0
-            ///divisionEnteros = Cociente.cocienteEnteros(4,0);
+                      case 3:
+                          System.out.println("Dame un número entero: ");
+                          int numInv = scanner.nextInt();
+                          System.out.println("El resultado del inverso entre " + numInv + " es: " + cocienteInverso(numInv));
 
-            // Inverso
-            double inverso = Cociente.cocienteInverso(8);
-            System.out.println("Inverso: " + inverso);
+                      case 4:
+                          System.out.println("Dame un número entero: ");
+                          int numRaiz = scanner.nextInt();
+                          System.out.println("El resultado de la raíz cuadrada de " + numRaiz + " es igual a: " + raizCuadrada(numRaiz));
 
-            //Raíz cuadrada
-            double raizCuadrada = Cociente.raizCuadrada(6);
-            System.out.println("Raíz cuadrada: " + raizCuadrada);
+                    default:
+                        System.out.println("Opción incorrecta");
+                        }
+                    }while (scanner.nextInt() !=4);
+            scanner.close();
+                }
+            }
 
-            //Raíz cuadrada negativo
-            raizCuadrada = Cociente.raizCuadrada(-6);
-
-
-    }
-
-
-
-}

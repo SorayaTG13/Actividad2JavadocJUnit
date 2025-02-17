@@ -15,22 +15,13 @@ class RestaTest {
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
         // Se ejecuta antés de cada test.
-        Resta = new Resta();
-    }
+        Resta  = new Resta();
 
 
 
         @org.junit.jupiter.api.Test
-        // prueba que el valor inicial sea 0.
         void getValorAcumulado () {
-        int valorInicial=0;
-        assert
-
-
-
-
         }
-
 
         @org.junit.jupiter.api.Test
         void restar () {
