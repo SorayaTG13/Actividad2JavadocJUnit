@@ -90,8 +90,6 @@ public class Modulo {
             }
         } while (opcion != 3);
 
-
-        scanner.close();
     }
 }
 
