@@ -13,7 +13,7 @@ class RestaTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        // Se ejecuta antés de cada test.
+        // Se ejecuta antés de cada test
         resta = new Resta();
     }
 

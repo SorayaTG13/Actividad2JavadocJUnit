@@ -114,8 +114,8 @@ public class Resta {
                     System.out.println("Introduce dos números enteros:");
                     int num1 = sc.nextInt();
                     int num2 = sc.nextInt();
-                    System.out.println(" Este es el qqqqq" +
-                            "Resultado: " + menu.restar(num1, num2));
+                    System.out.println(" Este es el  Resultado: " + menu.restar(num1, num2));
+
                     break;
                 case 2:
                     System.out.println("Introduce dos números reales:");
