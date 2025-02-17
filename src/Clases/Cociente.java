@@ -67,12 +67,12 @@ import java.util.Scanner;
      *
      * @param numRaiz Número real del que se calculará la raíz cuadrada
      * @return Raíz cuadrada de un número.
-     * @throws IllegalArgumentException mostrará un mensaje de error cuando a sea un número negativo
+     * @throws ArithmeticException mostrará un mensaje de error cuando a sea un número negativo
      */
 
         public static double raizCuadrada (int numRaiz) {
             if(numRaiz<0){
-                throw new IllegalArgumentException("Error. No es posible calcular la raíz cuadrada de un número negativo");
+                throw new ArithmeticException("Error. No es posible calcular la raíz cuadrada de un número negativo");
             }
             return Math.sqrt(numRaiz);
         }

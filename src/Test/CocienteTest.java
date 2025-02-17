@@ -31,8 +31,7 @@ public class CocienteTest {
 
     // Prueba division números enteros entre 0.
     @org.junit.jupiter.api.Test
-    void
-    cocienteRealesCero (){
+    void cocienteRealesCero (){
 
         assertThrows(ArithmeticException.class, () -> Cociente.cocienteReales(54, 0));
     }
