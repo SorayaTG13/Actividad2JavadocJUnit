@@ -46,7 +46,7 @@ public class Modulo {
      */
 
 
-    public void menu() {
+    public static void menu() {
         Modulo modulo = new Modulo();
         Scanner sc = new Scanner(System.in);
         int opcion;

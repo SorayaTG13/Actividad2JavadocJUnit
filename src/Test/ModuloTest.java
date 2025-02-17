@@ -2,12 +2,10 @@ package Test;
 
 import Clases.Modulo;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
-
 class ModuloTest {
-    private Modulo modulo;
 
     @BeforeEach
     void setUp() {
@@ -17,7 +15,7 @@ class ModuloTest {
 
     // PRUEBA CALCULO DEL MÓDULO
     @Test
-    void testCalcularModulo() {
+    void calcularModulo() {
         // Caso 1: 50 % 5 = 0
         int resultado1 = modulo.calcularModulo(50, 5);
         assertEquals(0, resultado1);
@@ -35,7 +33,7 @@ class ModuloTest {
 
     // PRUEBA CALCULO DEL VALOR ABSOLUTO
     @Test
-    void testCalcularValorAbsoluto() {
+    void calcularValorAbsoluto() {
         // Caso 1: Valor absoluto de 5.7 = 5.7
         double resultado1 = modulo.calcularValorAbsoluto(5.7);
         assertEquals(5.7, resultado1, 0.0001);
@@ -49,4 +47,7 @@ class ModuloTest {
         assertEquals(0, resultado3, 0.0001);
     }
 
+    @Test
+    void menu() {
+    }
 }
