@@ -140,7 +140,7 @@ public class Resta {
                     System.out.println("Valor acumulado: " + menu.getValorAcumulado());
                     break;
                 case 6:
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("Fin del programa...");
                     break;
                 default:
                     System.out.println("Opción no válida.");
