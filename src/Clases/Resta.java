@@ -127,7 +127,7 @@ public class Resta {
                     double numRT1 = sc.nextDouble();
                     double numRT2 = sc.nextDouble();
                     double numRT3 = sc.nextDouble();
-                    System.out.println("Resultado: " + menu.restarRealesTres(numRT1, numRT2, numRT3));
+                    System.out.println(" El Resultado es: " + menu.restarRealesTres(numRT1, numRT2, numRT3));
                     break;
                 case 4:
                     System.out.println("Introduce un número para restar al acumulado:");
