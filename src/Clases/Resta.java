@@ -1,4 +1,7 @@
 package Clases;
+
+import java.util.Scanner;
+
 /**
  * Esta clase sirve para restar dos números enteros,
  * dos números reales,tres números reales y hacer restas
@@ -85,6 +88,74 @@ public class Resta {
         valorAcumulado -= num;
         return valorAcumulado;
     }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Resta menu = new Resta();
+        int opcion;
+
+
+        do {
+            System.out.println("Elige una opción:");
+            System.out.println("1 - Resta de dos números enteros");
+            System.out.println("2 - Resta de dos números reales");
+            System.out.println("3 - Resta de tres números reales");
+            System.out.println("4 - Resta con valor acumulado");
+            System.out.println("5 - Consulta de valor acumulado");
+            System.out.println("6 - Salir");
+
+            while (!sc.hasNextInt()) {
+                System.out.println(" Introduce un número válido.");
+                sc.next();
+            }
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Introduce dos números enteros:");
+                    int num1 = sc.nextInt();
+                    int num2 = sc.nextInt();
+                    System.out.println("Resultado: " + menu.restar(num1, num2));
+                    break;
+                case 2:
+                    System.out.println("Introduce dos números reales:");
+                    double numR1 = sc.nextDouble();
+                    double numR2 = sc.nextDouble();
+                    System.out.println("Resultado: " + menu.restarReales(numR1,numR2));
+                    break;
+                case 3:
+                    System.out.println("Introduce tres números reales:");
+                    double numRT1 = sc.nextDouble();
+                    double numRT2 = sc.nextDouble();
+                    double numRT3 = sc.nextDouble();
+                    System.out.println("Resultado: " + menu.restarRealesTres(numRT1, numRT2, numRT3));
+                    break;
+                case 4:
+                    System.out.println("Introduce un número para restar al acumulado:");
+                    double num = sc.nextDouble();
+                    System.out.println("Nuevo valor acumulado: " + menu.restarAcumulado(num));
+
+                    break;
+                case 5:
+                    System.out.println("Valor acumulado: " + menu.getValorAcumulado());
+                    break;
+                case 6:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        } while (opcion != 6);
+
+        sc.close();
+    }
+
+
+
+
+
+
+
+
 
 }
 
