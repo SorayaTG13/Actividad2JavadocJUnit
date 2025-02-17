@@ -56,7 +56,7 @@ class RestaTest {
     }
 
     @org.junit.jupiter.api.Test
-    //  Realiza resta con valor acumulado.
+    //  Realiza resta con valor acumulado
     void restarAcumulado() {
         double resultado = resta.restarRealesTres(2.7, 6.9, 3.3);
         assertEquals(-7.5, resultado);

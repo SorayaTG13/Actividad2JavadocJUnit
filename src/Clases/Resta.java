@@ -133,7 +133,7 @@ public class Resta {
                 case 4:
                     System.out.println("Introduce un número para restar al acumulado:");
                     double num = sc.nextDouble();
-                    System.out.println("Nuevo valor acumulado: " + menu.restarAcumulado(num));
+                    System.out.println("Nuevo valor: " + menu.restarAcumulado(num));
 
                     break;
                 case 5:
