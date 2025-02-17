@@ -1,104 +1,119 @@
 package Clases;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-
 /**
  * ESTADISTICA
  * Esta clase proporciona métodos para calcular medidas estadísticas.
  * @author Mariano Criado Prados
  * @version 1.0
- */
+**/
+
 public class Estadistica {
-    public static void main(String[] args) {
+
+    public static void menu() {
         Scanner scanner = new Scanner(System.in);
+        int opcion = -1;
 
-        /**
-         * Cálculo de la media aritmética
-         */
-        System.out.print("Ingrese el número de valores decimales para el cálculo de la media: ");
-        int cantidadValoresMedia = scanner.nextInt();  // Debe ser int
+        // Menú de opciones
+        while (opcion != 4) {
+            System.out.println("¿Qué operación estadística deseas realizar?");
+            System.out.println("1. Calcular Media");
+            System.out.println("2. Calcular Varianza");
+            System.out.println("3. Calcular Desviación Estándar");
+            System.out.println("4. Salir");
 
-        if (cantidadValoresMedia <= 0) {
-            System.out.println("Error: La cantidad de valores debe ser mayor que 0.");
-            return;
+            // Leer opción del usuario
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    calcularMedia(scanner);
+                    break;
+                case 2:
+                    calcularVarianza(scanner);
+                    break;
+                case 3:
+                    calcularDesviacionEstandar(scanner);
+                    break;
+                case 4:
+                    System.out.println("Saliendo del menú de estadísticas...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
         }
-
-        ArrayList<Double> listaValoresMedia = new ArrayList<>();
-        double sumaMedia = 0.0;
-
-        System.out.println("Ingrese los " + cantidadValoresMedia + " valores decimales: ");
-        for (int i = 0; i < cantidadValoresMedia; i++) {
-            double valor = scanner.nextDouble();
-            listaValoresMedia.add(valor);
-            sumaMedia += valor;
-        }
-
-        double media = sumaMedia / cantidadValoresMedia;
-        System.out.println("La media es: " + media);
-
-        /**
-         * Cálculo de la varianza
-         */
-        System.out.print("\nIngrese el número de valores decimales para el cálculo de la varianza: ");
-        int cantidadVarianza = scanner.nextInt();
-
-        if (cantidadVarianza <= 0) {
-            System.out.println("Error: La cantidad de valores debe ser mayor que 0.");
-            return;
-        }
-
-        ArrayList<Double> listaValoresVarianza = new ArrayList<>();
-        double sumaVarianza = 0.0;
-
-        System.out.println("Ingrese los " + cantidadVarianza + " valores decimales: ");
-        for (int i = 0; i < cantidadVarianza; i++) {
-            double valor = scanner.nextDouble();
-            listaValoresVarianza.add(valor);
-            sumaVarianza += valor;
-        }
-
-        media = sumaVarianza / cantidadVarianza;
-        double sumaDiferencia = 0.0;
-
-        for (double valor : listaValoresVarianza) {
-            sumaDiferencia += Math.pow(valor - media, 2);
-        }
-
-        double varianza = sumaDiferencia / cantidadVarianza;
-        System.out.println("La varianza es: " + varianza);
-
-        /**
-         * Cálculo de la desviación estándar
-         */
-        System.out.print("Ingrese el número de valores decimales para el cálculo de la desviación estándar: ");
-        int cantidadDesviacion = scanner.nextInt();
-
-        if (cantidadDesviacion <= 0) {
-            System.out.println("Error: La cantidad de valores debe ser mayor que 0.");
-            return;
-        }
-
-        ArrayList<Double> listaValoresDesviacion = new ArrayList<>();
-        double sumaDesviacion = 0.0;
-
-        System.out.println("Ingrese los " + cantidadDesviacion + " valores decimales: ");
-        for (int i = 0; i < cantidadDesviacion; i++) {
-            double valor = scanner.nextDouble();
-            listaValoresDesviacion.add(valor);
-            sumaDesviacion += valor;
-        }
-
-        media = sumaDesviacion / cantidadDesviacion;
-        double sumaDiferenciaDesviacion = 0.0;
-
-        for (double valor : listaValoresDesviacion) {
-            sumaDiferenciaDesviacion += Math.pow(valor - media, 2);
-        }
-
-        double varianzaDesviacion = sumaDiferenciaDesviacion / cantidadDesviacion;
-        double desviacionEstandar = Math.sqrt(varianzaDesviacion);
-        System.out.println("La desviación stándard es: " + desviacionEstandar);
-
         scanner.close();
+    }
+
+    public static void calcularMedia(Scanner scanner) {
+        System.out.print("Ingrese el número de valores para calcular la media: ");
+        int cantidad = scanner.nextInt();
+
+        List<Double> valores = new ArrayList<>();
+        System.out.println("Ingrese los valores: ");
+        for (int i = 0; i < cantidad; i++) {
+            valores.add(scanner.nextDouble());
+        }
+
+        double media = calcularMedia(valores);
+        System.out.println("La media es: " + media);
+    }
+
+    public static void calcularVarianza(Scanner scanner) {
+        System.out.print("Ingrese el número de valores para calcular la varianza: ");
+        int cantidad = scanner.nextInt();
+
+        List<Double> valores = new ArrayList<>();
+        System.out.println("Ingrese los valores: ");
+        for (int i = 0; i < cantidad; i++) {
+            valores.add(scanner.nextDouble());
+        }
+
+        double varianza = calcularVarianza(valores);
+        System.out.println("La varianza es: " + varianza);
+    }
+
+    public static void calcularDesviacionEstandar(Scanner scanner) {
+        System.out.print("Ingrese el número de valores para calcular la desviación estándar: ");
+        int cantidad = scanner.nextInt();
+
+        List<Double> valores = new ArrayList<>();
+        System.out.println("Ingrese los valores: ");
+        for (int i = 0; i < cantidad; i++) {
+            valores.add(scanner.nextDouble());
+        }
+
+        double desviacionEstandar = calcularDesviacionEstandar(valores);
+        System.out.println("La desviación estándar es: " + desviacionEstandar);
+    }
+
+    public static double calcularMedia(List<Double> valores) {
+        if (valores.isEmpty()) {
+            throw new IllegalArgumentException("La lista de valores no puede estar vacía");
+        }
+
+        double suma = 0.0;
+        for (double valor : valores) {
+            suma += valor;
+        }
+        return suma / valores.size();
+    }
+
+    public static double calcularVarianza(List<Double> valores) {
+        if (valores.isEmpty()) {
+            throw new IllegalArgumentException("La lista de valores no puede estar vacía");
+        }
+
+        double media = calcularMedia(valores);
+        double sumaDiferencias = 0.0;
+        for (double valor : valores) {
+            sumaDiferencias += Math.pow(valor - media, 2);
+        }
+        return sumaDiferencias / valores.size();
+    }
+
+    public static double calcularDesviacionEstandar(List<Double> valores) {
+        return Math.sqrt(calcularVarianza(valores));
     }
 }
