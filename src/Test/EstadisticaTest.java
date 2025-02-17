@@ -8,12 +8,6 @@ import java.util.Collections;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EstadisticaTest {
-    /**
-     * Test Estadistica
-     * Esta clase proporciona métodos para calcular medidas estadísticas.
-     * @author Mariano Criado Prados
-     * @version 1.0
-     */
 
     @Test
     void testCalcularMedia() {
