@@ -1,13 +1,18 @@
 package Test;
 
 import Clases.Cociente;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CocienteTest {
-    private final Cociente cociente = new Cociente();
+    private Cociente cociente;
 
+    @BeforeEach
+    void setUp() {
+        cociente = new Cociente();
+    }
     //División entre dos números reales
     @Test
     public void testDividirReales() {
