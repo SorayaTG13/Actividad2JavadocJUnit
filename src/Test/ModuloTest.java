@@ -18,7 +18,7 @@ class ModuloTest {
 
     // PRUEBA CÁLCULO DEL MÓDULO
     @Test
-    void testcalcularModulo() {
+    void testCalcularModulo() {
         // Caso 1: 50 % 5 = 0
         int resultado1 = modulo.calcularModulo(50, 5);
         assertEquals(0, resultado1);
@@ -38,7 +38,7 @@ class ModuloTest {
 
     // PRUEBA CÁLCULO DEL MÓDULO CON DECIMALES
     @Test
-    void testcalcularModuloDecimales() {
+    void testCalcularModuloDecimales() {
         // Caso 1: 10.5 % 3.0 = 1.5
         assertEquals(1.5, modulo.calcularModuloDecimales(10.5, 3.0), 0.0001);
 
@@ -59,7 +59,7 @@ class ModuloTest {
 
     // PRUEBA CÁLCULO DEL VALOR ABSOLUTO
     @Test
-    void testcalcularValorAbsoluto() {
+    void testCalcularValorAbsoluto() {
         // Caso 1: Valor absoluto de 5.7 = 5.7
         double resultado1 = modulo.calcularValorAbsoluto(5.7);
         assertEquals(5.7, resultado1, 0.0001);
@@ -75,7 +75,7 @@ class ModuloTest {
 
     // PRUEBA CÁLCULO DEL VALOR ABSOLUTO CON DECIMALES
     @Test
-    void testCalcularValorAbsoluto() {
+    void testCalcularValorAbsolutoDecimales() {
         // Caso 1: Valor absoluto de -7.5 = 7.5
         assertEquals(7.5, modulo.calcularValorAbsoluto(-7.5), 0.0001);
 
