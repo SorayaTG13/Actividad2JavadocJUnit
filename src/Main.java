@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Creamos el menu principal para dar funcionalidad a todas las clases
  */
 public class Main {
-    private static Object Producto;
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
