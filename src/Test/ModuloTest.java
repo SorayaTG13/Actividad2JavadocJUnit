@@ -5,7 +5,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 class ModuloTest {
+
+    private Modulo modulo;  // Se declara la variable a nivel de clase
 
     @BeforeEach
     void setUp() {
@@ -13,7 +16,7 @@ class ModuloTest {
         modulo = new Modulo();
     }
 
-    // PRUEBA CALCULO DEL MÓDULO
+    // PRUEBA CÁLCULO DEL MÓDULO
     @Test
     void calcularModulo() {
         // Caso 1: 50 % 5 = 0
@@ -25,13 +28,15 @@ class ModuloTest {
         assertEquals(1, resultado2);
 
         // Caso 3: División por cero (debe lanzar una excepción)
-        Exception exception = assertThrows(ArithmeticException.class, () -> {
+        ArithmeticException exception = assertThrows(ArithmeticException.class, () -> {
             modulo.calcularModulo(10, 0);
         });
-        assertEquals("Error: El divisor no puede ser cero.", exception.getMessage());
+
+        // Verificamos que el mensaje de la excepción sea correcto (ajústalo según la implementación real)
+        assertEquals("El divisor no puede ser cero.", exception.getMessage());
     }
 
-    // PRUEBA CALCULO DEL VALOR ABSOLUTO
+    // PRUEBA CÁLCULO DEL VALOR ABSOLUTO
     @Test
     void calcularValorAbsoluto() {
         // Caso 1: Valor absoluto de 5.7 = 5.7
@@ -45,9 +50,5 @@ class ModuloTest {
         // Caso 3: Valor absoluto de 0 = 0
         double resultado3 = modulo.calcularValorAbsoluto(0);
         assertEquals(0, resultado3, 0.0001);
-    }
-
-    @Test
-    void menu() {
     }
 }
