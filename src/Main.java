@@ -1,9 +1,6 @@
 
 
-import Clases.Cociente;
-import Clases.Logaritmos;
-import Clases.Suma;
-import Clases.Trigonometria;
+import Clases.*;
 
 import java.util.Scanner;
 
@@ -11,6 +8,8 @@ import java.util.Scanner;
  * Creamos el menu principal para dar funcionalidad a todas las clases
  */
 public class Main {
+    private static Object Producto;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
