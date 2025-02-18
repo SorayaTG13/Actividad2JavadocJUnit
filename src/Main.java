@@ -1,9 +1,6 @@
 
 
-import Clases.Cociente;
-import Clases.Logaritmos;
-import Clases.Suma;
-import Clases.Trigonometria;
+import Clases.*;
 
 import java.util.Scanner;
 
