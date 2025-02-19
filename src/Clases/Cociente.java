@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Calculadora.
  *
  * @author: Sandra Marcos García
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
  * @version: 1.0
  */
 
