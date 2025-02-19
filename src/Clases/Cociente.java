@@ -6,7 +6,8 @@ import java.util.Scanner;
  *Clase que implementará todos los métodos que están relacionados con la división de la
  * Calculadora.
  *
- * @author: Sandra Marcos García
+ * @author: Sandra Marcos García (AKA @smarcos90 via: GitHub)
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
  * @version: 1.0
  */
 

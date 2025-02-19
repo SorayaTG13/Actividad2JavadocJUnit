@@ -33,7 +33,7 @@ class ModuloTest {
         });
 
         // Verificamos que el mensaje de la excepción sea correcto (ajústalo según la implementación real)
-        assertEquals("El divisor no puede ser cero.", exception.getMessage());
+        assertEquals("Error: El divisor no puede ser cero.", exception.getMessage());
     }
 
     // PRUEBA CÁLCULO DEL MÓDULO CON DECIMALES
@@ -43,7 +43,7 @@ class ModuloTest {
         assertEquals(1.5, modulo.calcularModuloDecimales(10.5, 3.0), 0.0001);
 
         // Caso 2: 7.75 % 2.5 = 0.75
-        assertEquals(0.75, modulo.calcularModuloDecimales(7.75, 2.5), 0.0001);
+        assertEquals(0.25, modulo.calcularModuloDecimales(7.75, 2.5), 0.0001);
 
         // Caso 3: 5.2 % 1.0 = 0.2
         assertEquals(0.2, modulo.calcularModuloDecimales(5.2, 1.0), 0.0001);

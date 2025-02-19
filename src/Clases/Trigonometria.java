@@ -4,6 +4,8 @@ package Clases;
  * Clase que implementará los métodos relacionados con el calculo del seno,
  * conseno y tangente para la calculadora.
  *
+ * @sse <a href=https://github.com/Aarondh84"></a>
+ *
  * @author: Aarón Díaz Hernández
  * @version: 1.3
  */
