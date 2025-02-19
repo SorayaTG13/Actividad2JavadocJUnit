@@ -116,4 +116,9 @@ public class Producto {
         // Llamamos al menú interactivo
         menu();
     }
+
+    public double productotresReales(double v, double v1, double v2) {
+        return 0;
+    }
+
 }
