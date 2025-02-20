@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .idea/
 *.iml
 /out/
@@ -7,6 +8,8 @@
 Thumbs.db
 *.log
 =======
+=======
+>>>>>>> ff73d02cbf9ae14cde19c5d4726c2bdb2ad23416
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
@@ -35,5 +38,9 @@ bin/
 .vscode/
 
 ### Mac OS ###
+<<<<<<< HEAD
+.DS_Store
+>>>>>>> ff73d02cbf9ae14cde19c5d4726c2bdb2ad23416
+=======
 .DS_Store
 >>>>>>> ff73d02cbf9ae14cde19c5d4726c2bdb2ad23416
