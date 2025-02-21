@@ -43,7 +43,7 @@ class RestaTest {
         //comprueba la resta de dos números reales.
     void restarReales() {
         double resultado = resta.restarReales(3.5, 2.2);
-        assertEquals(1.3, resultado);
+        assertEquals(1.3, resultado,0.0001);
 
     }
 
@@ -58,7 +58,7 @@ class RestaTest {
         // resta con valor acumulado.
     void restarAcumulado() {
         double resultado = resta.restarAcumulado(7.5);
-        assertEquals(-7.5, resultado);
+        assertEquals(-7.5, resultado,0.0001);
     }
 
 }
