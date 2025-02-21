@@ -91,7 +91,7 @@ public class Resta {
         valorAcumulado -= num;
         return valorAcumulado;
     }
-    public static void main(String[] args) {
+    public static void menu() {
         Scanner sc = new Scanner(System.in);
         Resta menu = new Resta();
         int opcion;
