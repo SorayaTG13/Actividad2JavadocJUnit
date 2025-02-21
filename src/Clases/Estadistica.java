@@ -88,6 +88,13 @@ public class Estadistica {
         System.out.println("La desviación estándar es: " + desviacionEstandar);
     }
 
+
+    /**
+     * GESTION EXCEPCION:
+     * @param valores de calculo de media
+     * @return Media
+     * @throws IllegalArgumentException Si la lista está vacía
+     */
     public static double calcularMedia(List<Double> valores) {
         if (valores.isEmpty()) {
             throw new IllegalArgumentException("La lista de valores no puede estar vacía");
@@ -100,6 +107,12 @@ public class Estadistica {
         return suma / valores.size();
     }
 
+    /**
+     * GESTION EXCEPCION:
+     * @param valores necesarios para el cálculo
+     * @return calculo varianza
+     * @throws IllegalArgumentException Si la lista está vacía
+     */
     public static double calcularVarianza(List<Double> valores) {
         if (valores.isEmpty()) {
             throw new IllegalArgumentException("La lista de valores no puede estar vacía");
@@ -110,10 +123,19 @@ public class Estadistica {
         for (double valor : valores) {
             sumaDiferencias += Math.pow(valor - media, 2);
         }
-        return sumaDiferencias / valores.size();
+        return sumaDiferencias / (valores.size() - 1);
     }
 
+    /**
+     * GESTION EXCEPCION:
+     * @param valores base desviación estándar
+     * @return desviacion estandar
+     * @throws IllegalArgumentException Si la lista está vacía
+     */
     public static double calcularDesviacionEstandar(List<Double> valores) {
+        if (valores.isEmpty()) {
+            throw new IllegalArgumentException("La lista de valores no puede estar vacía");
+        }
         return Math.sqrt(calcularVarianza(valores));
     }
 }
