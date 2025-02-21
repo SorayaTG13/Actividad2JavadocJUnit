@@ -7,6 +7,8 @@ import java.util.Scanner;
  * Esta clase proporciona la resolución matemática de logaritmos y exponenciales
  * @author Adrián Guerrero Martínez
  * @version 1.0
+ * Github ProfileName: AdrianGM90
+ * GitHub RepositoryURL: https://github.com/SorayaTG13/Actividad2JavadocJUnit.git
  */
 
 public class Logaritmos {

@@ -6,8 +6,9 @@ import java.util.Scanner;
  *Clase que implementará todos los métodos que están relacionados con la división de la
  * Calculadora.
  *
- * @author: Sandra Marcos García
- * @version: 1.0
+ * @author Sandra Marcos Garcia (AKA smarcos90 via: GitHub)
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git></a>
+ * @version 1.0
  */
 
     public class Cociente {
