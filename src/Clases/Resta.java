@@ -1,5 +1,6 @@
 package Clases;
 
+
 import java.util.Scanner;
 
 /**
@@ -9,6 +10,7 @@ import java.util.Scanner;
  *
  * @author Lucelly Montes
  * @version 0.1
+ * * @see <a href=https://github.com/lucellymon/Actividad2JavadocJUnit.git>
  */
 
 
@@ -16,6 +18,7 @@ public class Resta {
     /**
      * valorAcumulado es una variable de instancia
      * para el valor acumulado.
+
      */
     private double valorAcumulado;
 
@@ -55,12 +58,12 @@ public class Resta {
     /**
      * Resta de dos números reales.
      *
-     * @param num1 Primer número real.
-     * @param num2 Segundo número real.
+     * @param numR1 Primer número real.
+     * @param numR2 Segundo número real.
      * @return La resta de numR1 y numR2.
      */
-    public double restarReales(double num1, double num2) {
-        return num1 - num2;
+    public double restarReales(double numR1, double numR2) {
+        return numR1 - numR2;
     }
 
 
