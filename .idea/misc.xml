@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../../../../DAM/0102_ED/02_Tareas/02_TRIMESTRE/AD2_Jacadoc_JUnit/docs_LucellyMontes/doc_Resta" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/doc/docs_SandraMarcos/doc_Cociente" />
     <option name="OPTION_SCOPE" value="private" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
