@@ -9,6 +9,7 @@ import java.util.Scanner;
  *
  * @author: Aitor Quilez Herrero (AKA @Thorqui via: GitHub)
  * @version 2.0 Ultimate edition
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
  */
 
 public class Modulo {

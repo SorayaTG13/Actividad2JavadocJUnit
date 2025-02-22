@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Esta clase proporciona métodos para calcular medidas estadísticas.
  * @author Mariano Criado Prados
  * @version 1.2
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
 **/
 
 public class Estadistica {

@@ -1,13 +1,15 @@
 package Clases;
 
-/*
+/**
  * Clase que implementará los métodos relacionados con el calculo del seno,
  * conseno y tangente para la calculadora.
  *
- * @sse <a href=https://github.com/Aarondh84"></a>
- *
  * @author: Aarón Díaz Hernández
  * @version: 1.3
+ *
+ * @see Github ProfileName: Aarondh84
+ * @see Github ProfileURL: <a href=https://github.com/Aarondh84"></a>
+ * @see GitHub RepositoryURL: <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git"></a>
  */
 
 import java.util.Scanner;

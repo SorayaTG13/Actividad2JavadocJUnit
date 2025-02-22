@@ -9,6 +9,7 @@ import java.util.Scanner;
  *
  * @author Lucelly Montes
  * @version 0.1
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
  */
 
 

@@ -5,6 +5,7 @@ import java.util.Scanner;  // Make sure to import Scanner for reading user input
  * @author Esther Igualada Panadero
  * @version 1.0
  * clase para calcular el producto
+ * @see <a href=https://github.com/SorayaTG13/Actividad2JavadocJUnit.git>
  */
 public class Producto {
 
